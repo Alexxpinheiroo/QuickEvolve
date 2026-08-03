@@ -1,0 +1,6 @@
+{
+  "name": "QuickEvolve",
+  "description": "Plataforma de preparação para concursos públicos com o Templo Spartan Academy, Sistema POO de Cadastro e Admissão, Simulados e Evolução por Matérias.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,68 @@
+{
+  "entities": {
+    "users": {
+      "title": "User Profile & Cognitive Metrics",
+      "description": "Student progress, Google account link, bank mastery, and mind-shaping cognitive metrics",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" },
+        "level": { "type": "number" },
+        "xp": { "type": "number" },
+        "streakDays": { "type": "number" },
+        "totalQuestionsAnswered": { "type": "number" },
+        "correctQuestionsCount": { "type": "number" },
+        "targetExamType": { "type": "string" },
+        "targetExamName": { "type": "string" },
+        "bankMastery": {
+          "type": "object",
+          "properties": {
+            "cebraspe": { "type": "number" },
+            "fgv": { "type": "number" },
+            "ibfc": { "type": "number" },
+            "fundatec": { "type": "number" },
+            "vunesp": { "type": "number" },
+            "laSalle": { "type": "number" }
+          }
+        },
+        "cognitiveProfile": {
+          "type": "object",
+          "properties": {
+            "trapResistance": { "type": "number" },
+            "lawTextPrecision": { "type": "number" },
+            "jurisprudenceMastery": { "type": "number" },
+            "avgTimePerQuestion": { "type": "number" },
+            "mindShapeStage": { "type": "string" }
+          }
+        }
+      },
+      "required": ["uid", "email"]
+    },
+    "users/{userId}/simulados": {
+      "title": "Simulado Attempt History",
+      "description": "Completed mock exams and bank specific performance",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "bank": { "type": "string" },
+        "score": { "type": "number" },
+        "total": { "type": "number" },
+        "timeSpentSeconds": { "type": "number" },
+        "completedAt": { "type": "string" }
+      }
+    },
+    "users/{userId}/cognitiveLogs": {
+      "title": "Mind Shaping Logs",
+      "description": "Cognitive pattern analysis and AI adjustments to student mindset",
+      "properties": {
+        "timestamp": { "type": "string" },
+        "triggerEvent": { "type": "string" },
+        "patternDetected": { "type": "string" },
+        "recommendation": { "type": "string" }
+      }
+    }
+  }
+}
